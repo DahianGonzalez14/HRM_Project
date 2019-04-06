@@ -88,3 +88,4 @@ C:\Users\Dahian\source\repos\ProyectoFinalASP\Proyecto-Final-Asp\ProyectoFinalAS
 C:\Users\Dahian\source\repos\ProyectoFinalASP\Proyecto-Final-Asp\ProyectoFinalASP\bin\EntityFramework.SqlServer.dll
 C:\Users\Dahian\source\repos\ProyectoFinalASP\Proyecto-Final-Asp\ProyectoFinalASP\bin\EntityFramework.xml
 C:\Users\Dahian\source\repos\ProyectoFinalASP\Proyecto-Final-Asp\ProyectoFinalASP\bin\EntityFramework.SqlServer.xml
+C:\Users\Dahian\source\repos\ProyectoFinalASP\Proyecto-Final-Asp\ProyectoFinalASP\obj\Debug\ProyectoFinalASP.csprojAssemblyReference.cache
