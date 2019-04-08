@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ProyectoFinalASP.Models.Nominas>
+<br /><br />
+
+<div align="center">
+
+    <h2>Buscar Nominas</h2>
+    <p>Buscar Nominas por mes o por año</p>
+    @using (Html.BeginForm("BuscarNomina", "InformeNomina", FormMethod.Get))
+    {
+        <input type="number" name="buscar" value="buscar" class="form-control" placeholder="Escriba el mes o el año" required>
+        @*@Html.TextBox("buscar", null, new {
+       @class = "form-control", @placeholder = "Escriba el mes o el año", @type="number", })*@
+        <br />
+        <input type="submit" class="btn btn-primary" value="Buscar" />
+    }
+    <table class="table table-striped">
+        <thead>
+            <tr>
+
+                <th>Monto Total</th>
+                <th>Año</th>
+                <th>Mes</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>@item.MontoTotal</td>
+                    <td>@item.Año</td>
+                    <td>@item.Mes</td>
+                </tr>
+            }
+
+
+
+        </tbody>
+    </table>
+
+</div>
+

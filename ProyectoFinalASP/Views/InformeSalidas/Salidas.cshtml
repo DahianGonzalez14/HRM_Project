@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ProyectoFinalASP.Models.Salida>
+
+<div align="center">
+    <h2>Salida de empleado por mes</h2>
+    <p>Salida de empleado por mes en la empresa</p>
+    @using (Html.BeginForm("Salidas", "InformeSalidas", FormMethod.Get))
+    {
+        <p>
+            <input type="text" name="buscar" class="form-control" placeholder="Escriba el mes de salida" required>
+            <br />
+
+            <input class="btn btn-primary" type="submit" value="Search" />
+        </p>
+    }
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados.Codigo_Empleado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaSalida)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Empleados.Codigo_Empleado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Empleados.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Empleados.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaSalida)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+

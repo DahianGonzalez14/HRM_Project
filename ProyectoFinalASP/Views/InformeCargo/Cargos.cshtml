@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ProyectoFinalASP.Models.Cargo>
+<br /><br />
+
+<div align="center">
+
+    <h2>Cargos Creados</h2>
+    <p>Cargos creados de la Empresa</p>
+    @using (Html.BeginForm("Departamentos", "InformeDepartamentos", FormMethod.Get))
+    {
+        @*<input type="number" name="buscar" value="buscar" class="form-control" placeholder="Escriba el mes o el año" required>*@
+        @*@Html.TextBox("buscar", null, new {
+            @class = "form-control", @placeholder = "Escriba el mes o el año", @type="number", })*@
+        @*<br />
+            <input type="submit" class="btn btn-primary" value="Buscar" />*@
+    }
+    <table class="table table-striped">
+        <thead>
+            <tr>
+
+                <th>Nombre</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>@item.Cargo1</td>
+
+
+                </tr>
+            }
+
+
+
+        </tbody>
+    </table>
+
+</div>
+
+
+

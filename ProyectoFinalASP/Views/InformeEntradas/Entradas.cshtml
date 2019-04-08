@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ProyectoFinalASP.Models.Empleados>
+<br /><br />
+
+<div align="center">
+
+    <h2>Entradas de empleados por Mes</h2>
+    <p>Entradas de empleados a la empresa por mes</p>
+    @using (Html.BeginForm("Entradas", "InformeEntradas", FormMethod.Get))
+    {
+        <input type="number" name="buscar" class="form-control" placeholder="Escriba el Mes de Entrada" required>
+        @*@Html.TextBox("buscar", null, new {
+            @class = "form-control", @placeholder = "Escriba el mes o el año", @type="number", })*@
+        <br />
+        <input type="submit" class="btn btn-primary" value="Buscar" />
+    }
+    <table class="table table-striped">
+        <thead>
+            <tr>
+
+                <th>Nombre del Empleado</th>
+                <th>Fecha de Ingreso</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>@item.Nombre</td>
+                    <td>@item.Fecha_DE_Ingreso</td>
+                   
+                </tr>
+            }
+
+
+
+        </tbody>
+    </table>
+
+</div>

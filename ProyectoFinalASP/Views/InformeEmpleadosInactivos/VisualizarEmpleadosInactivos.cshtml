@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ProyectoFinalASP.Models.Empleados>
+    <br /><br />
+
+          <div align="center">
+
+              <h2>Empleados Inactivos</h2>
+              <p>Empledos Inactivos de la Empresa</p>
+              @using (Html.BeginForm("VisualizarEmpleadosInactivos", "InformeEmpleadosInactivos", FormMethod.Get))
+              {
+                  @*<input type="number" name="buscar" value="buscar" class="form-control" placeholder="Escriba el mes o el año" required>*@
+                  @*@Html.TextBox("buscar", null, new {
+            @class = "form-control", @placeholder = "Escriba el mes o el año", @type="number", })*@
+                  @*<br />
+            <input type="submit" class="btn btn-primary" value="Buscar" />*@
+              }
+              <table class="table table-striped">
+                  <thead>
+                      <tr>
+
+                          <th>Nombre</th>
+                          <th>Apellido</th>
+                          <th>Departamento</th>
+                          <th>Telefono</th>
+                          <th>Cargo</th>
+                          <th>Salario</th>
+                          <th>Fecha de Ingreso</th>
+                          <th>Estatus</th>
+
+                      </tr>
+                  </thead>
+                  <tbody>
+
+                      @foreach (var item in Model)
+                      {
+                          <tr>
+
+                              <td>@item.Nombre</td>
+                              <td>@item.Apellido</td>
+                              <td>@item.Departamento</td>
+                              <td>@item.Telefono</td>
+                              <td>@item.Cargo</td>
+                              <td>@item.Salario</td>
+                              <td>@item.Fecha_DE_Ingreso</td>
+                              <td>@item.Estatus</td>
+
+                          </tr>
+                      }
+
+
+
+                  </tbody>
+              </table>
+
+          </div>
+
+

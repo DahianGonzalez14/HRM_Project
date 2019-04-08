@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ProyectoFinalASP.Models.Permisos>
+<br /><br />
+
+<div align="center">
+
+    <h2>Buscar Permisos</h2>
+    <p>Buscar Permisos por nombre de los empleados</p>
+    @using (Html.BeginForm("Permisos", "InformePermisos", FormMethod.Get))
+    {
+        <input type="text" name="buscar"  class="form-control" placeholder="Escriba el nombre del Empleado" required>
+        @*@Html.TextBox("buscar", null, new {
+            @class = "form-control", @placeholder = "Escriba el mes o el año", @type="number", })*@
+        <br />
+        <input type="submit" class="btn btn-primary" value="Buscar" />
+    }
+    <table class="table table-striped">
+        <thead>
+            <tr>
+
+                <th>Desde</th>
+                <th>Hasta</th>
+                <th>Comentarios</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>@item.Desde</td>
+                    <td>@item.Hasta</td>
+                    <td>@item.Comentarios</td>
+                </tr>
+            }
+
+
+
+        </tbody>
+    </table>
+
+</div>
+
+

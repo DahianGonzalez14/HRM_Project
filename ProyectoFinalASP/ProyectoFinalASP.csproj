@@ -138,6 +138,14 @@
     <Compile Include="Controllers\DepartamentoesController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InformeCargoController.cs" />
+    <Compile Include="Controllers\InformeDepartamentosController.cs" />
+    <Compile Include="Controllers\InformeEmpleadosActivosController.cs" />
+    <Compile Include="Controllers\InformeEmpleadosInactivosController.cs" />
+    <Compile Include="Controllers\InformeEntradasController.cs" />
+    <Compile Include="Controllers\InformeNominaController.cs" />
+    <Compile Include="Controllers\InformePermisosController.cs" />
+    <Compile Include="Controllers\InformeSalidasController.cs" />
     <Compile Include="Controllers\LicenciasController.cs" />
     <Compile Include="Controllers\NominasController.cs" />
     <Compile Include="Controllers\PermisosController.cs" />
@@ -279,6 +287,14 @@
     <Content Include="Views\Licencias\Details.cshtml" />
     <Content Include="Views\Licencias\Edit.cshtml" />
     <Content Include="Views\Licencias\Index.cshtml" />
+    <Content Include="Views\InformeNomina\BuscarNomina.cshtml" />
+    <Content Include="Views\InformeEmpleadosActivos\BuscarEmpleadosActivos.cshtml" />
+    <Content Include="Views\InformeEmpleadosInactivos\VisualizarEmpleadosInactivos.cshtml" />
+    <Content Include="Views\InformeDepartamentos\Departamentos.cshtml" />
+    <Content Include="Views\InformeCargo\Cargos.cshtml" />
+    <Content Include="Views\InformePermisos\Permisos.cshtml" />
+    <Content Include="Views\InformeEntradas\Entradas.cshtml" />
+    <Content Include="Views\InformeSalidas\Salidas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
